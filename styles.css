@@ -1,4 +1,33 @@
-main{
+body{
     margin:0;
+    padding:0;
+    width:100vw;
+    overflow:hidden;
+}
+main{
+    margin:0 ;
+}
+main sidebar{
+    width: 300px;
     background-color: rgba(43, 43, 43, 0.76);
+    height:100vh;
+    position:fixed;
+}
+main sidebar button{
+    width:300px;
+    background-color: black;
+    border-radius:15px;
+    color:white;
+}
+main sidebar ul{
+    list-style-type: none;
+    color:white;
+}
+main sidebar ul li{
+    width:150px;
+    height:20px;
+    margin-top:0.5em;
+    background-color:black;
+    border-radius: 15px;
+    padding:0.5em;
 }
