@@ -3,9 +3,16 @@ body{
     padding:0;
     width:100vw;
     overflow:hidden;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 main{
     margin:0 ;
+}
+.rotate90{
+    transform: rotate(90deg);
 }
 main sidebar{
     width: 300px;
@@ -24,10 +31,23 @@ main sidebar ul{
     color:white;
 }
 main sidebar ul li{
-    width:150px;
+    display:flex;
+    
+    text-align:center;
+}
+main sidebar ul li div{
+    display:flex;
+    align-items: center;
+    width:200px;
     height:20px;
-    margin-top:0.5em;
+    padding:0.5em;
+    margin: 5px;
     background-color:black;
     border-radius: 15px;
-    padding:0.5em;
+}
+main sidebar ul li div span{
+    justify-content: center;
+}
+.sidebar-link{
+    cursor:pointer;
 }
