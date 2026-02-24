@@ -22,10 +22,11 @@ btnsidebar.addEventListener("click",()=>{
     }
 })
 const menu=document.querySelector("menu");
-document.getElementById("menu").addEventListener("click",()=>{
-    if (menu.classList.contains("hidden")){
-        menu.classList.remove("hidden");
-    }else{
-        menu.classList.add("hidden");
-    }
-});
+document.querySelectorAll("#menu, #close-menu").forEach(element => {
+    element.addEventListener("click",()=>{
+        if (menu.classList.contains("hidden")){
+            menu.classList.remove("hidden");
+        }else{
+            menu.classList.add("hidden");
+        }
+})});

@@ -12,7 +12,7 @@ body{
     display:none;
 }
 menu{
-    position:absolute;
+    position:fixed;
     z-index: 100;
     width:500px;
     height:400px;
@@ -20,6 +20,9 @@ menu{
     left:calc((100vw - 500px) / 2);
     background-color: salmon;
     margin: 0;
+    padding: 0;
+    overflow-y:scroll;
+    border-radius: 15px;
 }
 
 .rotate90{
@@ -32,10 +35,12 @@ topbar{
     background-color: rgb(123, 123, 123);
     display:flex;
     overflow-x: auto;
+    overflow-y:hidden;
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     position:fixed;
     top:0;
+    align-items:center;
 }
 button{
     align-items: center;
@@ -62,6 +67,7 @@ topbar #sidebar-button{
     width:150px;
     min-width:150px;
     padding:5px;
+    
     margin: 5px;
     margin-left:0;
 }
@@ -72,6 +78,15 @@ topbar #menu{
     justify-content: center;
     padding:5px;
     margin: 5px;
+}
+topbar #topbar-left{
+    display:flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+topbar p{
+    min-width:fit-content;
 }
 sidebar{
     width: 200px;
@@ -85,6 +100,16 @@ sidebar{
     padding-top: 5px;
     overflow-y: auto;
     box-sizing: border-box;
+}
+
+/* If viewport is too short, anchor the menu to the top so it can scroll reliably */
+@media (max-height: 480px) {
+    menu{
+        top: 10px;
+        transform: none;
+        /* ensure it never goes below the viewport and is scrollable */
+        max-height: calc(100vh - 20px);
+    }
 }
 sidebar ul{
     list-style-type: none;

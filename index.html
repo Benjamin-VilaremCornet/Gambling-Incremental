@@ -14,16 +14,28 @@
 </head>
 <body>
     <menu class="hidden">
-        <p>sgf</p>
+        <button id="close-menu"><i class="material-icons">close</i> - close menu</button>
     </menu>
+
+    <shop>
+
+    </shop>
+    <upgrades>
+
+    </upgrades>
     <topbar>
         <button id="menu"><i class="material-icons">settings</i></button>
         <button id="sidebar-button"><<<<<<<<<<<<<<<<<<<<<</button>
-        <button>sdsgjfsdjhffhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhj</button>
+        <p id="money-display">Money: $<span id="money-amount">0</span></p>
+        <div id="topbar-left">
+            <button>Shop</button>
+            <button>Account</button>
+            <button>Casino</button>
+        </div>
     </topbar>
     <sidebar>
         <ul>
-            <p>Games</p>
+            <p>Upgrades</p>
             <li><div class="sidebar-link coin"><i class="material-icons">change_circle</i><span>Coin flip</span></div></li>
             <li><div class="sidebar-link dice"><i class="material-icons">casino</i><span>Dice</span></div></li>
             <li><div class="sidebar-link high-low"><i class="material-icons rotate90">compare_arrows</i><span>High or low</span></div></li>
@@ -39,5 +51,6 @@
     <main>
     </main>
     <script src="script.js"></script>
+    <script src="gameloop.js"></script>
 </body>
 </html>
